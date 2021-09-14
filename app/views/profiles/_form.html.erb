@@ -1,0 +1,26 @@
+<%= form_with model: @profile, local: true do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name, "ニックネーム" %>
+      <%= f.text_field :name %>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :training_history, "トレーニング歴(年)" %>
+      <%= f.number_field :training_history %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :self_introduction, "自己紹介" %>
+      <%= f.text_field :self_introduction %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image, "プロフィール画像" %>
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="submit-block">
+      <%= f.submit class: "button" %>
+    </div>
+  <% end %>
